@@ -1,0 +1,89 @@
+html {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    color: gray;
+    height: 100vh;
+}
+
+.container {
+    display:block;
+    max-width: 500px;
+    align-items: center;
+    margin:0 auto;
+}
+.box {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 400px ;
+    height: 70px;
+}
+
+.heading{
+    color: grey;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+}
+.content {
+    font-size: large;
+
+}
+input[type="checkbox"] {
+    margin: 20px;
+}
+input[type="text"] {
+    width: 300px;
+    margin: 20px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: gray;
+}
+.plus{
+    border-radius: 50%;
+    height: 40px;
+    background-color: rgb(245, 201, 57);
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    border-style: none;
+}
+.navBar {
+    display:inline-flexbox;
+    border: 5px solid white;
+}
+.button{
+    font-size: larger;
+    margin: 20px;
+    padding: 20px;
+    height: 100px;
+   
+}
+h1 {
+    display: inline-flex;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid  rgb(245, 201, 57);
+}
+input[type="checkbox"] :checked + .label {
+    color: #777;
+    text-decoration: line-through;
+    
+  }
+  .strike {
+    text-decoration: line-through;
+  }
+  .work {
+    background-color: rgba(248, 237, 237, 0.818);
+    color: darkgray;
+  }
+  .footer {
+    color: black;
+  }

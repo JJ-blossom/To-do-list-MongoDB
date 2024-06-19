@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peony"s todo's</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+<div class="navBar">
+    <h1>PEONY's TODO's</h1>
+    <a href="/"><button class="button plus">HOME</button></a>
+    <a href="/work"><button class="button plus">WORK</button></a>
+
+</div>
+<div class="container">
+        <div class="box heading">
+            <h2><%= date %></h2>
+        </div>
+        <div content>
+        <% if (locals.items){ %>
+            <% items.forEach((item) => {%>
+            <form action="/delete" method="POST">
+                <div class="box content">
+                    <input type="checkbox" id="toDo" class="checkbox" onChange="this.form.submit()" name="checkbox" value="<%= item._id%>" >
+                    <label for="toDo"> <%=item.name %> </label>
+                </div>
+            </form>
+            <% })} %>
+    
+    <form action="/" method="POST">
+        <div class="box">
+            <input type="text" name="inputBox" placeholder="NEW ITEM" class="content">
+            <input type="submit" name="addButton" value="  +  " class="plus">
+        </div>
+    </form>
+    </div>
+</div>
+<footer class="footer">
+    <p>Copyright PeonyBlossom © <%= new Date().getFullYear() %></p>
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script type="text/javascript"  src="server.js" charset="UTF-8"></script>
+</body>
+</html>
